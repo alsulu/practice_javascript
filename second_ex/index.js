@@ -1,23 +1,26 @@
+let a, b;
+
+function value() {
+    a = prompt('Введите первое число:');
+    b = prompt('Введите второе число:');
+}
+
 function sum() {
-    let a = prompt('Введите первое число:');
-    let b = prompt('Введите второе число:');
-    alert(Number(a)+Number(b));
+    value();
+    return(Number(a)+Number(b));
 }
 
 function sub() {
-    let a = prompt('Введите первое число:');
-    let b = prompt('Введите второе число:');
-    alert(a-b);
+    value();
+    return(a-b);
 }
 
 function mult() {
-    let a = prompt('Введите первое число:');
-    let b = prompt('Введите второе число:');
-    alert(a*b);
+    value();
+    return(a*b);
 }
 
 function div() {
-    let a = prompt('Введите первое число:');
-    let b = prompt('Введите второе число:');
-    alert(a/b);
+    value();
+    return(a/b);
 }
