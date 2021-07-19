@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            height: 25px;
+            margin: 15px 0 10px 0;
+        }
+
+        select {
+            height: 31px;
+            margin: 15px 0 10px 0;
+        }
+
+        p {
+            margin: 0 0 15px 0;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin: auto;">
+        <div
+            style="width: 450px; margin: auto; border: 1px rgb(212, 212, 212) solid; border-radius: 10px; padding: 40px">
+            <img src="https://www.google.ru/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png" style="width: 80px">
+            <h1 style="margin: 10px 0; font-size: 28px; font-weight: 200; color: rgb(15, 15, 15);">Создайте аккаунт Google
+            </h1>
+            <form>
+                <input type="text" id="name" placeholder="Имя" style="width: 47%;">
+                <input type="text" id="surname" placeholder="Фамилия" style="width: 47%; float: right;">
+                <p id="name-rule" style="margin: 0;"></p>
+                <input type="email" id="mail" placeholder="Имя пользователя" style="width: 98.3%;">
+                <p id="email-rule" style="margin: 0;"></p>
+                <input type="password" id="password" placeholder="Пароль" style="width: 47%;">
+                <input type="password" id="password-again" placeholder="Подтвердить" style="width: 47%; float: right;">
+                <p id="password-rule">Пароль должен содержать не менее восьми знаков</p>
+                <input type="tel" id="number" placeholder="Номер телефона (необязательно)" style="width: 98.3%;">
+                <p id="number-rule" style="margin: 0;"></p>
+                <div style="display: grid; grid-template-columns: 30% 30% 30%; column-gap: 5%; align-items: center;">
+                    <input type="text" id="day" placeholder="День">
+                    <select id="month">
+                        <option value="" disabled selected hidden>Месяц</option>
+                        <option value="jan">Январь</option>
+                        <option value="feb">Февраль</option>
+                        <option value="mar">Март</option>
+                        <option value="apr">Апрель</option>
+                        <option value="may">Май</option>
+                        <option value="jun">Июнь</option>
+                        <option value="jul">Июль</option>
+                        <option value="aug">Август</option>
+                        <option value="sep">Сентябрь</option>
+                        <option value="oct">Октябрь</option>
+                        <option value="nov">Ноябрь</option>
+                        <option value="dec">Декабрь</option>
+                    </select>
+                    <input type="text" id="year" placeholder="Год">
+                </div>
+                <p id="birthday-rule">Дата рождения</p>
+
+                <div style="font-size: 13.4px; color: black;">
+                    <label><input type="radio" name="sex" value="women" style="height: auto; margin: 10px 5px 5px 0;">Женский</label><br>
+                    <label><input type="radio" name="sex" value="men" style="height: auto; margin: 5px 5px 5px 0;">Мужской</label><br>
+                    <label><input type="radio" name="sex" value="no-sex" style="height: auto; margin: 5px 5px 15px 0;">Не указан</label><br>
+                </div>
+                <p id="sex-rule">Пол</p>
+            </form>
+            <input type="button" onClick="alert(check());" value="Зарегистрироваться" style="height: 35px; padding: 0 10px; margin: 15px 0 10px 0; font-size: 14px; font-weight: 600; letter-spacing: 0.5px; background-color: rgb(58, 141, 219); color: white; border: none; border-radius: 5px;">
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
