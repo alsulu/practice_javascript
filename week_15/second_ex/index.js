@@ -77,5 +77,5 @@ function check ()
     }
 
     if (count == 6)
-        return `Добро пожаловать, ${document.getElementById("name").value}!`;
+        alert(`Добро пожаловать, ${document.getElementById("name").value}!`);
 }
