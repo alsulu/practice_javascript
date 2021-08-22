@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Калькулятор</title>
+</head>
+<body>
+    <main>
+        <h1>Рассчитать стоимость автомобиля</h1>
+
+        <select id="brands" onchange="selectBrand(this)" class="select">
+            <option value="none" disabled selected hidden>Выберите бренд</option>
+            <option value="audi">Audi</option>
+            <option value="honda">Honda</option>
+            <option value="suzuki">Suzuki</option>
+            <option value="volvo">Volvo</option>
+        </select>
+    
+        <select id="models" onchange="selectModel(event)" disabled class="select">
+            <option value="none" disabled selected hidden>Выберите модель</option>
+        </select>
+    
+        <div id="fuel-type" onchange="selectFuel(event)">
+            <p>Тип топлива</p>
+            <label><input type="radio" name="fuel" value="100">бензин</label><br>
+            <label><input type="radio" name="fuel" value="150">дизельное топливо</label><br>
+            <label><input type="radio" name="fuel" value="200" id="electic">электрический</label><br>
+        </div>
+    
+        <div id="volume" onchange="selectVolume(event)" hidden>
+            <p>Объём двигателя, см3</p>
+            <input type="text" value="">
+        </div>
+    
+        <div onchange="selectPower(event)">
+            <p>Мощность, л.с.</p>
+            <input id="power" type="text" value="" disabled>
+        </div>
+        
+        <div id="age" onchange="selectAge(event)" disabled>
+            <p>Возраст автомобиля</p>
+            <label><input type="radio" name="car-age" value="400">Меньше 3 лет</label><br>
+            <label><input type="radio" name="car-age" value="300">От 3 до 5 лет</label><br>
+            <label><input type="radio" name="car-age" value="200" >От 5 до 7 лет</label><br>
+            <label><input type="radio" name="car-age" value="100" >Больше 7 лет</label><br>
+        </div>
+    
+        <div id="more" onchange="selectMore(event)" hidden>
+            <p>Требуются ли дополнительные услуги</p>
+            <input type="checkbox" value="250">Да
+        </div>
+    
+        <input id="result" onclick="alert(`${resultArray()} рублей`)" type="button" value="Посчитать" disabled>
+    
+        <script src="names.js"></script>
+        <script src="index.js"></script>
+    </main>
+</body>
+</html>

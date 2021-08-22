@@ -1,0 +1,46 @@
+main {
+    width: 405px;
+    margin: 5vh auto;
+    padding: 7vh 5vw;
+    color: rgb(24, 24, 24);
+    background-color: rgb(146, 240, 188);
+    border: 3px rgba(107, 240, 167, 0.795) solid;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Arial;
+
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 23px;
+    font-family: Arial;
+    margin: 0 0 25px 0;
+}
+
+.select,
+#result {
+    font-size: 15px;
+    font-family: Arial;
+    width: 40%;
+    color: rgb(24, 24, 24);
+}
+
+
+#result {
+    height: 27px;
+    background-color: rgb(238, 245, 255);
+    border: 2px rgb(109, 177, 255) solid;
+    border-radius: 4px;
+}
+
+.select,
+div {
+    margin-bottom: 25px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
