@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Введите полное имя</h2>
+    <form>
+        <input type="text" id="full_name" placeholder="Фамилия Имя Отчество" required>
+        <input type="button" value="Отправить" onclick="reform()">
+
+        <h3>Введённые Вами данные:</h3>
+        <p>Фамилия:</p>
+        <input type="text" class="name" id="surname" disabled>
+        <p>Имя:</p>
+        <input type="text" class="name" id="first_name" disabled>
+        <p>Отчество:</p>
+        <input type="text" class="name" id="patronymic" disabled>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
