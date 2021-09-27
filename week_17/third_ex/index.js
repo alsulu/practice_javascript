@@ -7,7 +7,7 @@ function formatDate(date) {
         return sec + " сек. назад";
     }
     else if (now - date < 60*60*1000) {
-        let min = Math.floor((now - date) / (60*1000))
+        let min = Math.floor((now - date) / (60 * 1000))
         return min + " мин. назад";
     }
     else {
