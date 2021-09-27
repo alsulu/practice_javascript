@@ -1,0 +1,43 @@
+h2,
+h3 {
+    color: rgb(64, 32, 97);
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+body {
+    position: relative;
+}
+
+#comments {
+    margin-left: 25px;
+}
+
+#add_comment {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    padding: 30px;
+    bottom: 0;
+    left: 0;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    color: rebeccapurple;
+}
+
+.comment {
+    margin: 0;
+}
+
+.button {
+    background-color: rgb(192, 147, 236);
+    border-color: rgb(192, 147, 236);
+}

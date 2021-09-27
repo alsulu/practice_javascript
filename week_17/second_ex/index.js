@@ -1,8 +1,7 @@
 function add() {
     let comment1 = checkSpam();
-    document.getElementById("comments").innerHTML += `<p>Аноним</p>`;
-    document.getElementById("comments").innerHTML += `<p>${comment1}</p>`;
-    document.getElementById("comments").innerHTML += `<hr>`;
+    document.getElementById("comments").innerHTML += `<p class="name">Аноним</p>`;
+    document.getElementById("comments").innerHTML += `<p class="comment">${comment1}</p>`;
 }
 
 function checkSpam() {
