@@ -13,9 +13,13 @@ select {
     margin: 15px 0 10px 0;
 }
 
-.rules {
+p {
     margin: 0;
     font-size: 12px;
+}
+
+.p {
+    margin-bottom: 5px;
 }
 
 .window {
@@ -78,7 +82,7 @@ h1 {
 .button {
     height: 35px;
     padding: 0 10px;
-    margin: 15px 0 10px 0;
+    margin: 20px 0 10px 0;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.5px;

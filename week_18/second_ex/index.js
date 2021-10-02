@@ -1,41 +1,53 @@
-let errors = [];
+let errors;
+
 function checkValidity(input) {
     let validity = input.validity;
     if (validity.valueMissing) {
-        errors.push('Поле "' + input.placeholder + '" не заполнено');
+        errors = 'Поле "' + input.placeholder + '" не заполнено';
     }
-    if (validity.patternMismatch) {
-        errors.push(`Неверный формат заполнения поля "${input.placeholder}"`);
+    if (validity.patternMismatch || validity.typeMismatch || validity.badInput) {
+        errors = `Неверный формат заполнения поля "${input.placeholder}"`;
     }
     if (validity.rangeOverflow) {
         let max = input.getAttribute('max');
-        errors.push('Для регистрации Вы должны быть не младше 14 лет');
+        errors = 'Введите значение меньше ' + max;
     }
     if (validity.rangeUnderflow) {
         let min = input.getAttribute('min');
-        errors.push('Для регистрации Вы должны быть не старше 110 лет');
+        errors = 'Введите значение больше ' + min;
+    }
+    if (validity.tooLong) {
+        errors = `Превышено максимальное количество символов в поле "${input.placeholder}"`;
+    }
+    if (validity.tooShort) {
+        errors = `Слишком маленькая длина поля "${input.placeholder}"`;
     }
 }
 
 function checkAll() {
     let inputs = document.querySelectorAll("input");
+    const number = document.getElementById("number");
 
     for (let i = 0; i < inputs.length; i++) {
-        errors = [];
-        checkValidity(inputs[i]);
-        document.getElementsByClassName("rules")[i].innerHTML = errors.join(', <br>');
-        document.getElementsByClassName("rules")[i].style.color = "red";
-    }
+        errors = "";
 
+        if (inputs[i] === number[0] && inputs[i].value !== "")
+            inputs[i].setAttribute("required", "true")
+        else if (inputs[i] === number[0] && inputs[i].value === "")
+            inputs[i].required = false;
+
+        if (inputs[i] === document.getElementById("password-again") && inputs[i-1].validity.valid)
+            if (inputs[i].value !== inputs[i-1].value)
+                errors = "Пароли не совпадают";
+
+        checkValidity(inputs[i]);
+
+        showError(i);
+    }
 }
 
-function ValidateEmail(emailField) {
-    let mailFormat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
-    if (emailField.value.match(mailFormat)) {
-        return true;
-    }
-    else {
-        alert("Ваш адрес электронной почты введен неверно!");
-        return false;
-    }
+function showError(index) {
+    const rules = document.getElementsByClassName("rules");
+    rules[index].innerHTML = errors;
+    rules[index].style.color = "red";
 }

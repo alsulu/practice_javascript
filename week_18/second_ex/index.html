@@ -15,20 +15,20 @@
             <img src="https://www.google.ru/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png" style="width: 80px">
             <h1>Создайте аккаунт Google</h1>
             <form>
-                <input type="text" id="name" placeholder="Имя" pattern="^[a-zA-Zа-яА-Я]{2,16}$" required>
-                <input type="text" id="surname" placeholder="Фамилия" pattern="^[a-zA-Zа-яА-Я]{2,16}$" required>
+                <input type="text" id="name" placeholder="Имя" pattern="^[A-Za-zА-Яа-яЁё]+$" minlength=2 maxlength=16 required>
+                <input type="text" id="surname" placeholder="Фамилия" pattern="^[A-Za-zА-Яа-яЁё]+$" minlength=2 maxlength=16 required>
                 <p class="rules"></p>
                 <p class="rules"></p>
-                <input type="email" id="mail" placeholder="Имя пользователя@gmail.com" pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" required>
+                <input type="email" id="mail" placeholder="Имя пользователя@gmail.com" pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)$" required>
                 <p class="rules"></p>
-                <input type="password" id="password" placeholder="Пароль" required>
+                <input type="password" id="password" placeholder="Пароль" pattern="^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$" minlength="8" maxlength="20" required>
                 <input type="password" id="password-again" placeholder="Подтвердить пароль" required>
                 <p class="rules">Пароль должен содержать не менее восьми знаков</p>
                 <p class="rules"></p>
-                <input type="tel" id="number" placeholder="Номер телефона (необязательно)" pattern="^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$">
+                <input type="tel" id="number" placeholder="Номер телефона" pattern="^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$">
                 <p class="rules"></p>
                 <div class="select">
-                    <input type="text" id="day" placeholder="День">
+                    <input type="number" max=31 min=1 id="day" placeholder="День">
                     <select id="month">
                         <option value="" disabled selected hidden>Месяц</option>
                         <option value="jan">Январь</option>
@@ -46,7 +46,8 @@
                     </select>
                     <input type="number" max=2007 min=1911 id="year" placeholder="Год" required>
                 </div>
-                <p class="rules">Дата рождения</p>
+                <p class="p">Дата рождения</p>
+                <p class="rules"></p>
                 <p class="rules"></p>
 
                 <div class="sex-div">
@@ -54,7 +55,8 @@
                     <label><input class="sex" type="radio" name="sex" value="men">Мужской</label><br>
                     <label><input class="sex" type="radio" name="sex" value="no-sex">Не указан</label><br>
                 </div>
-                <p class="rules">Пол</p>
+                <p class="p">Пол</p>
+                <p class="rules"></p>
                 <input type="button" class="button" onClick="checkAll();" value="Зарегистрироваться">
                 <div id="errorsInfo"></div>
             </form>
