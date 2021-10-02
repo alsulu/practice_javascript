@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div>
+        <div class="window">
+            <img src="https://www.google.ru/images/branding/googlelogo/2x/googlelogo_color_160x56dp.png" style="width: 80px">
+            <h1>Создайте аккаунт Google</h1>
+            <form>
+                <input type="text" id="name" placeholder="Имя" pattern="^[a-zA-Zа-яА-Я]{2,16}$" required>
+                <input type="text" id="surname" placeholder="Фамилия" pattern="^[a-zA-Zа-яА-Я]{2,16}$" required>
+                <p class="rules"></p>
+                <p class="rules"></p>
+                <input type="email" id="mail" placeholder="Имя пользователя@gmail.com" pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" required>
+                <p class="rules"></p>
+                <input type="password" id="password" placeholder="Пароль" required>
+                <input type="password" id="password-again" placeholder="Подтвердить пароль" required>
+                <p class="rules">Пароль должен содержать не менее восьми знаков</p>
+                <p class="rules"></p>
+                <input type="tel" id="number" placeholder="Номер телефона (необязательно)" pattern="^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$">
+                <p class="rules"></p>
+                <div class="select">
+                    <input type="text" id="day" placeholder="День">
+                    <select id="month">
+                        <option value="" disabled selected hidden>Месяц</option>
+                        <option value="jan">Январь</option>
+                        <option value="feb">Февраль</option>
+                        <option value="mar">Март</option>
+                        <option value="apr">Апрель</option>
+                        <option value="may">Май</option>
+                        <option value="jun">Июнь</option>
+                        <option value="jul">Июль</option>
+                        <option value="aug">Август</option>
+                        <option value="sep">Сентябрь</option>
+                        <option value="oct">Октябрь</option>
+                        <option value="nov">Ноябрь</option>
+                        <option value="dec">Декабрь</option>
+                    </select>
+                    <input type="number" max=2007 min=1911 id="year" placeholder="Год" required>
+                </div>
+                <p class="rules">Дата рождения</p>
+                <p class="rules"></p>
+
+                <div class="sex-div">
+                    <label><input class="sex" type="radio" name="sex" value="women" placeholder="Пол" required>Женский</label><br>
+                    <label><input class="sex" type="radio" name="sex" value="men">Мужской</label><br>
+                    <label><input class="sex" type="radio" name="sex" value="no-sex">Не указан</label><br>
+                </div>
+                <p class="rules">Пол</p>
+                <input type="button" class="button" onClick="checkAll();" value="Зарегистрироваться">
+                <div id="errorsInfo"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
