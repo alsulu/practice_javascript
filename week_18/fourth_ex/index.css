@@ -1,0 +1,24 @@
+#new {
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 79, 0.178);
+}
+
+.button {
+    height: 30px;
+    width: 90px;
+    background-color: rgba(255, 255, 79, 0.808);
+    border: 1px solid rgb(204, 204, 85);
+    border-radius: 4px;
+    margin: 0;
+}
+
+#myNotes {
+    font-size: 18px;
+    font-family: monospace;
+    background-color: whitesmoke;
+}
+
+p {
+    white-space: pre-wrap;
+}
