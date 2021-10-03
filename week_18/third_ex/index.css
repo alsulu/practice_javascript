@@ -1,0 +1,86 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+h2,
+h3 {
+    color: rgb(64, 32, 97);
+    margin-top: 0;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+body {
+    position: relative;
+}
+
+#comments {
+    margin: 0 20px;
+}
+
+#add_comment {
+    background-color: white;
+    padding: 15px;
+    top: 0;
+    left: 0;
+}
+
+.name {
+    font-weight: 600;
+    color: rebeccapurple;
+    margin: 0 0 0 10px;
+}
+
+.comment {
+    margin: 0 5px;
+    color: rgb(62, 55, 68);
+    width: calc(100% - 135px);
+}
+
+.img-class {
+    margin: 10px 0;
+}
+
+#text,
+#author {
+    background-color: rgb(247, 239, 255);
+    border: 1px solid rgb(204, 164, 245);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.button {
+    background-color: rgb(192, 147, 236);
+    border-color: rgb(192, 147, 236);
+    border-radius: 4px;
+    font-size: 14px;
+    height: 30px;
+    width: 80px;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    object-fit: fill;
+    background-color: rgb(251, 247, 255);
+    border: 1px solid rgba(183, 164, 196, 0.322);
+    box-shadow: none;
+}
+
+p {
+    font-size: 18px;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+.one-comment {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    line-height: 40px;
+    background-color: rgb(216, 188, 245);
+    width: 100%;
+}

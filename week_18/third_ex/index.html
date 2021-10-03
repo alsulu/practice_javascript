@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="add_comment">
+        <h3>Добавьте комментарий</h3>
+        <div>
+            <label for="author"></label>Имя:
+            <input type="text" id="author" value="Аноним">
+        </div>
+        <div class="img-class">
+            <img id="photo">
+            <label for="image"></label>
+            <input type="file" onchange="fileSelected(event)" id="image">
+        </div>
+        <div>
+            <label for="text"></label>
+            <textarea type="text" id="text" placeholder="Начните писать..." cols="50" rows="4"></textarea>
+        </div>
+        <input type="button" class="button" value="Добавить" onclick="add()">
+    </div>
+
+    <div id="comments">
+        <h2>Все комментарии:</h2>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
