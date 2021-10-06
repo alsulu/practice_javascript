@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос про котиков</title>
+    <link rel="shortcut icon" href="kot.svg" type="image/svg">
+    <style>
+        body {
+            font-family: Arial;
+        }
+        select {
+            font-size: 16px;
+        }
+        div, fieldset {
+            margin-top: 15px;
+        }
+        img {
+            height: 300px;
+            object-fit: cover;
+        }
+        input:required:valid {
+            border-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Поучаствуй в опросе про любимых питомцев</h1>
+    <img src="mur.jpg" width="40%" id="catImage">
+    <form>
+        <div>Кличка питомца*
+            <input type="text" id="nickname" required/>
+        <div>
+            <label for="name">Имя владельца*</label>
+            <input type="text" id="name" required/></div>
+        <fieldset>
+            <legend>Ваши контактные данные</legend>
+        <div>
+            <label for="mail">E-mail*</label>
+            <input type="email" id="mail" required>
+        </div>
+        <div>
+            <label for="number">Номер телефона*</label>
+            <input type="tel" id="number" required pattern="^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$">
+        </div>
+        </fieldset>
+        <div>
+            <select id="breed" required>
+                <option value="" disabled selected hidden>Выберите породу кошки</option>
+                <option value="ангорская">Ангорская кошка</option>
+                <option value="сиамская">Сиамская кошка</option>
+                <option value="сфинкс">Сфинкс</option>
+                <option value="бенгальская">Бенгальская кошка</option>
+                <option value="турецкая">Турецкая ангора</option>
+            </select>*
+        </div>
+        <div>
+            <label>Чем питается питомец:*<br/>
+                <input class="feed" name="feed" type="radio" value="сухой корм" required/> сухой корм<br />
+                <input class="feed" name="feed" type="radio" value="влажный корм"/> влажный корм<br />
+                <input class="feed" name="feed" type="radio" value="натуральный корм"/> натуральный корм<br />
+            </label>
+        </div>
+        <div>
+            <div>Укажите пол котика:*<br/>
+                <label><input type="radio" name="sex" class="sex" value="самка" required/> Самка<br /></label>
+                <label><input type="radio" name="sex" class="sex" value="самец"/> Самец</label>
+            </div>
+        </div>
+        <div><textarea placeholder="Ваш комментарий (необязательно)" rows="5" cols="50"></textarea></div>
+        <div>
+            По желанию приложить фото питомца:
+            <label for="upload_photo"></label>
+            <input type="file" id="upload_photo"/>
+        </div>
+        <div>
+            <button onclick="getInfo()">Отправить</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
