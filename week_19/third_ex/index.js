@@ -5,7 +5,7 @@ class Calc {
     }
 
     static sum() {
-        this.value();
+        this.value()
         return Number(this.numb1) + Number(this.numb2);
     }
     static sub() {
@@ -18,10 +18,9 @@ class Calc {
     }
     static div() {
         this.value();
-        return this.numb1 / this.numb2;
+        return (this.numb1 / this.numb2).toFixed(2);
     }
-}
-
-function result(result) {
-    document.getElementById("result").innerHTML = result;
+    static result(result) {
+        document.getElementById("result").innerHTML = result;
+    }
 }
