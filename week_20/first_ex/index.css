@@ -1,0 +1,76 @@
+main {
+    margin: auto;
+    width: 65vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+.superHero {
+    margin: 20px 0;
+    padding: 40px;
+    border: 1px gray solid;
+}
+
+p {
+    font-size: 18px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.rating-area {
+    overflow: hidden;
+    width: 265px;
+    margin: 0 auto;
+}
+
+.rating-area:not(:checked)>input {
+    display: none;
+}
+
+.rating-area:not(:checked)>label {
+    float: right;
+    width: 42px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 32px;
+    line-height: 32px;
+    color: lightgrey;
+}
+
+.rating-area:not(:checked)>label:before {
+    content: '★';
+}
+
+.rating-area>input:checked~label {
+    color: gold;
+}
+
+.rating-area:not(:checked)>label:hover,
+.rating-area:not(:checked)>label:hover~label {
+    color: gold;
+}
+
+/*.rating-area>input:checked+label:hover,
+.rating-area>input:checked+label:hover~label,
+.rating-area>input:checked~label:hover,
+.rating-area>input:checked~label:hover~label,
+.rating-area>label:hover~input:checked~label {
+    color: gold;
+}*/
+
+.rate-area>label:active {
+    position: relative;
+}
