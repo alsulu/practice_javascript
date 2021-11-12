@@ -54,36 +54,38 @@ button.onclick = function(event) {
         if (!errors)
             err ++;
     }
-
-    if (err === 9) {
-        let name = document.getElementById("name").value.toLowerCase();
-        let surname = document.getElementById("surname").value.toLowerCase();
-        let user = {
-            name: name[0].toUpperCase() + name.slice(1),
-            surname: surname[0].toUpperCase() + surname.slice(1),
-            password: document.getElementById("password").value,
-            phone: document.getElementById("number").value,
-            dayBirth: document.getElementById("day").value,
-            monthBirth: document.getElementById("month").value,
-            yearBirth: document.getElementById("year").value,
-            sex: document.querySelector(".sex:checked").value
-        }
-        fetch("https://httpbin.org/post",
-        {
-            method: 'POST',
-            body: JSON.stringify(user),
-            headers: {
-                'Content-Type': 'application/json; charset=utf-8'
-            },
-        })
-        .then(response => response.json())
-        .then(user => console.log(user))
-        .catch(error => console.log(error))
-    }
+    if (err === 9)
+        post();
 }
 
 function showError(index) {
     const rules = document.getElementsByClassName("rules");
     rules[index].innerHTML = errors;
     rules[index].style.color = "red";
+}
+
+function post() {
+    let name = document.getElementById("name").value.toLowerCase();
+    let surname = document.getElementById("surname").value.toLowerCase();
+    let user = {
+        name: name[0].toUpperCase() + name.slice(1),
+        surname: surname[0].toUpperCase() + surname.slice(1),
+        password: document.getElementById("password").value,
+        phone: document.getElementById("number").value,
+        dayBirth: document.getElementById("day").value,
+        monthBirth: document.getElementById("month").value,
+        yearBirth: document.getElementById("year").value,
+        sex: document.querySelector(".sex:checked").value
+    }
+    fetch("https://httpbin.org/post",
+    {
+        method: 'POST',
+        body: JSON.stringify(user),
+        headers: {
+            'Content-Type': 'application/json; charset=utf-8'
+        },
+    })
+    .then(response => response.json())
+    .then(user => console.log(user))
+    .catch(error => console.log(error))
 }
