@@ -28,7 +28,7 @@ function checkAll() {
     let inputs = document.querySelectorAll("input");
     const number = document.getElementById("number");
 
-    for (let i = 0; i < inputs.length; i++) {
+    for (let i = 0; i < document.getElementsByClassName("rules").length; i++) {
         errors = "";
 
         if (inputs[i] === number[0] && inputs[i].value !== "")
