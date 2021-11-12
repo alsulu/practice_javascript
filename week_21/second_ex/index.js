@@ -1,30 +1,5 @@
 let button = document.getElementsByClassName("button")[0];
-
 let errors;
-
-function checkValidity(input) {
-    let validity = input.validity;
-    if (validity.valueMissing) {
-        errors = 'Поле "' + input.placeholder + '" не заполнено';
-    }
-    if (validity.patternMismatch || validity.typeMismatch || validity.badInput) {
-        errors = `Неверный формат заполнения поля "${input.placeholder}"`;
-    }
-    if (validity.rangeOverflow) {
-        let max = input.getAttribute('max');
-        errors = 'Введите значение меньше ' + max;
-    }
-    if (validity.rangeUnderflow) {
-        let min = input.getAttribute('min');
-        errors = 'Введите значение больше ' + min;
-    }
-    if (validity.tooLong) {
-        errors = `Превышено максимальное количество символов в поле "${input.placeholder}"`;
-    }
-    if (validity.tooShort) {
-        errors = `Слишком маленькая длина поля "${input.placeholder}"`;
-    }
-}
 
 button.onclick = function(event) {
     event.preventDefault();
@@ -54,8 +29,33 @@ button.onclick = function(event) {
         if (!errors)
             err ++;
     }
+    
     if (err === 9)
         post();
+}
+
+function checkValidity(input) {
+    let validity = input.validity;
+    if (validity.valueMissing) {
+        errors = 'Поле "' + input.placeholder + '" не заполнено';
+    }
+    if (validity.patternMismatch || validity.typeMismatch || validity.badInput) {
+        errors = `Неверный формат заполнения поля "${input.placeholder}"`;
+    }
+    if (validity.rangeOverflow) {
+        let max = input.getAttribute('max');
+        errors = 'Введите значение меньше ' + max;
+    }
+    if (validity.rangeUnderflow) {
+        let min = input.getAttribute('min');
+        errors = 'Введите значение больше ' + min;
+    }
+    if (validity.tooLong) {
+        errors = `Превышено максимальное количество символов в поле "${input.placeholder}"`;
+    }
+    if (validity.tooShort) {
+        errors = `Слишком маленькая длина поля "${input.placeholder}"`;
+    }
 }
 
 function showError(index) {
