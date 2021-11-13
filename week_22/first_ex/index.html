@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос про котиков</title>
+    <link rel="shortcut icon" href="kot.svg" type="image/svg">
+    <style>
+        body {
+            font-family: Arial;
+        }
+        select {
+            font-size: 16px;
+        }
+        div, fieldset {
+            margin-top: 15px;
+        }
+        img {
+            height: 300px;
+            object-fit: cover;
+        }
+        input:required:valid {
+            border-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Поучаствуй в опросе про любимых питомцев</h1>
+    <img src="mur.jpg" width="40%" id="catImage">
+    <form id="form">
+        <div>Кличка питомца*
+            <input type="text" id="klichka" name="catNickname" required/>
+        </div>
+        <div>
+            <label for="name">Имя владельца*</label>
+            <input type="text" id="name" name="ownerName" required/></div>
+        <fieldset>
+            <legend>Ваши контактные данные</legend>
+        <div>
+            <label for="mail">E-mail*</label>
+            <input type="email" id="mail" name="email" required>
+        </div>
+        <div>
+            <label for="number">Номер телефона*</label>
+            <input type="tel" id="number" name="phone" required pattern="^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$">
+        </div>
+        </fieldset>
+        <div>
+            <select name="breed" required>
+                <option value="" disabled selected hidden>Выберите породу кошки</option>
+                <option value="angora">Ангорская кошка</option>
+                <option value="siamese">Сиамская кошка</option>
+                <option value="sphinks">Сфинкс</option>
+                <option value="bengal">Бенгальская кошка</option>
+                <option value="turkish">Турецкая ангора</option>
+            </select>*
+        </div>
+        <div>
+            Чем питается питомец:*<br/>
+            <label><input name="feed" type="radio" value="dryFood" required/> сухой корм</label><br />
+            <label><input name="feed" type="radio" value="wetFood"/> влажный корм</label><br />
+            <label><input name="feed" type="radio" value="naturalFood"/> натуральный корм</label><br />
+        </div>
+        <div>
+            Укажите пол котика:*<br/>
+            <label><input type="radio" name="sex" value="female" required> Самка</label><br />
+            <label><input type="radio" name="sex" value="male"> Самец</label>
+        </div>
+        <div><textarea  name="comment" placeholder="Ваш комментарий (необязательно)" rows="10" cols="50"></textarea></div>
+        <div>
+            По желанию приложить фото питомца:
+            <label for="upload_photo"></label>
+            <input name="photo" type="file" id="upload_photo"/>
+        </div>
+        <div>
+            <button>Отправить</button>
+        </div>
+    </form>
+
+    <script>
+        let button = document.getElementsByTagName("button")[0];
+        
+        button.onclick = function(event) {
+            if (document.querySelector("form:valid")) {
+                event.preventDefault();
+                fetch("https://httpbin.org/pos",
+                {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    try {
+                        if (response.ok) 
+                            return response.json();
+                        else {
+                            let message;
+                            switch (response.status) {
+                                case 404: 
+                                    message = "сервер не найден";
+                                    break;
+                                case 503: 
+                                    message = "сервер временно недоступен, попробуйте позже";
+                                    break;
+                                default: 
+                                    message = response.status;
+                            }
+                            throw new Error("Ошибка: " + message)
+                        }
+                    }
+                    catch (error) {
+                        alert(error.message)
+                    }
+                })
+                .then(user => console.log(user))
+                .catch(err => console.log(err))
+            }
+        }
+    </script>
+</body>
+</html>
