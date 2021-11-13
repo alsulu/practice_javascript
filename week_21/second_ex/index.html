@@ -21,8 +21,8 @@
                 <p class="rules"></p>
                 <input type="email" id="mail" placeholder="Имя пользователя@gmail.com" pattern="^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)$" required>
                 <p class="rules"></p>
-                <input type="password" id="password" placeholder="Пароль" pattern="^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$" minlength="8" maxlength="20" required>
-                <input type="password" id="password-again" placeholder="Подтвердить пароль" required>
+                <input type="password" autocomplete="off" id="password" placeholder="Пароль" pattern="^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$" minlength="8" maxlength="20" required>
+                <input type="password" autocomplete="off" id="password-again" placeholder="Подтвердить пароль" required>
                 <p class="rules">Пароль должен содержать не менее восьми знаков</p>
                 <p class="rules"></p>
                 <input type="tel" id="number" placeholder="Номер телефона" pattern="^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$">
