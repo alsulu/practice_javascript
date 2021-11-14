@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+<body>
+    <menu>
+        <div class="logo"></div>
+        <h1>Project</h1>
+        <select class="projects">
+            <option selected>Hope project</option>
+            <option>Other project</option>
+        </select>
+        <div class="menu">
+            <div>
+                <img src="">
+                <h3>Dashboard</h3>
+            </div>
+            <div>
+                <img src="">
+                <h3>Backlog</h3>
+            </div>
+            <div>
+                <img src="">
+                <h3>Active Sprint</h3>
+            </div>
+            <div>
+                <img src="">
+                <h3>Reports</h3>
+            </div>
+            <div>
+                <img src="">
+                <h3>Pages</h3>
+            </div>
+            <div>
+                <img src="">
+                <h3>Setting</h3>
+            </div>
+        </div>
+        <div class="add">
+            <p>Add <br>New Task</p>
+            <button>+</button>
+        </div>
+    </menu>
+    <main>
+        <div class="main_top">
+            <h1>Dashboard</h1>
+            <p id="date"></p>
+            <select class="calendar">
+                <option selected>Jan-Feb 2021</option>
+            </select>
+        </div>
+        <div class="hello-cont">
+            <div class="hello">
+                <h3>Welcome <br>Isabella Tabakova</h3>
+                <p>You have 2 project to finish and already completed 68% <br>from your monthly level. Keep going to your goal.</p>
+                <button class="btn-more">More &#10095;</button>
+            </div>
+        </div>
+        <div class="tasks">
+            <div class="graph-cont">
+                <div class="graph">
+                    <h3>Weekly Activity</h3>
+                    <canvas id="graph" height="100" aria-label="tasks" role="img"></canvas>
+                </div>
+            </div>
+            <div class="count"></div>
+        </div>
+    </main>
+    <section></section>
+    
+    <script src="bundle.js"></script>
+</body>
+</html>

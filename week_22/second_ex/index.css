@@ -1,0 +1,224 @@
+body {
+    display: grid;
+    grid-template-columns: 15vw 65vw 1fr;
+}
+
+menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", "Arial", sans-serif;
+    background-color: white;
+    padding: 0;
+}
+
+.logo {
+    height: 50px;
+}
+
+.projects {
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    height: 45px;
+    width: 70%;
+    font-weight: 800;
+    font-size: 12px;
+    color: rgb(32, 32, 32);
+    font-family: "Montserrat", "Arial", sans-serif;
+    border: none;
+    padding: 10px;
+    margin: auto;
+}
+
+/*.projects:hover option /*{
+    padding: 10px;
+    height: 40px;
+    border: 1px grey solid;
+    border-radius: 10px;
+}*/
+
+menu h1 {
+    font-size: 14px;
+    width: 70%;
+    margin: 15px auto;
+}
+
+.menu div,
+.add {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+}
+
+.menu div h3 {
+    width: auto;
+    color: rgb(32, 32, 32);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.add {
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    justify-content: center;
+    padding: 0 5px;
+}
+
+.add p {
+    width: 55%;
+    font-weight: 800;
+    font-size: 12px;
+    color: rgb(32, 32, 32);
+}
+
+.add button {
+    height: 35px;
+    width: 35px;
+    border-radius: 30px;
+    border: none;
+    background-color: indianred;
+    color: white;
+    font-size: 20px;
+}
+
+main {
+    background-color: rgba(238, 246, 248, 0.788);
+}
+
+.main_top {
+    height: 70px;
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "title calendar"
+        "date calendar";
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    padding: 30px 0 20px 0;
+}
+
+.main_top h1 {
+    grid-area: title;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(32, 32, 32);
+    margin-bottom: 0;
+}
+
+#date {
+    grid-area: date;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    color: gray;
+    font-weight: 600;
+}
+
+.calendar {
+    grid-area: calendar;
+    background-color: white;
+    border-radius: 10px;
+    height: 45px;
+    font-weight: 800;
+    font-size: 12px;
+    color: rgba(32, 32, 32, 0.712);
+    font-family: "Montserrat", "Arial", sans-serif;
+    border: none;
+    padding: 10px;
+}
+
+#now-day {
+    color: rgb(39, 39, 148);
+}
+
+.hello-cont,
+.tasks {
+    height: 250px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.hello-cont {
+    background-color: rgba(255, 181, 162, 0.582);
+}
+
+.hello {
+    width: 85%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.tasks {
+    display: grid;
+    grid-template-columns: 1fr 20%;
+    column-gap: 20px;
+}
+
+.graph-cont {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.btn-more {
+    width: 100px;
+    height: 35px;
+    font-size: 14px;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    color: rgba(209, 77, 95, 0.712);
+    font-weight: 800;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.hello h3,
+.hello p {
+    color: rgba(209, 77, 95, 0.712);
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 20px;
+}
+
+.hello h3 {
+    font-weight: 700;
+}
+
+.hello p {
+    line-height: 25px;
+}
+
+.graph {
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    height: 100px;
+}
+
+.graph h3 {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(32, 32, 32);
+}
+
+.count {
+    display: flex;
+    border-radius: 10px;
+    background-color: rgba(74, 74, 190, 0.836);
+    justify-content: center;
+    align-items: center;
+}
+
+.count p {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Nunito Sans", sans-serif;
+    color: white;
+}
+
+.count p span {
+    font-size: 28px;
+}
