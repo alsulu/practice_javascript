@@ -84,16 +84,14 @@
         button.onclick = function(event) {
             if (document.querySelector("form:valid")) {
                 event.preventDefault();
-                fetch("https://httpbin.org/pos",
+                fetch("https://httpbin.org/post",
                 {
                     method: 'POST',
                     body: new FormData(form)
                 })
                 .then(response => {
                     try {
-                        if (response.ok) 
-                            return response.json();
-                        else {
+                        if (!response.ok) {
                             let message;
                             switch (response.status) {
                                 case 404: 
@@ -107,6 +105,7 @@
                             }
                             throw new Error("Ошибка: " + message)
                         }
+                        return response.json();
                     }
                     catch (error) {
                         alert(error.message)
