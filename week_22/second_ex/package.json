@@ -10,6 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "chart.js": "^3.6.0",
-    "moment": "^2.29.1"
+    "js-datepicker": "^5.18.0",
+    "moment": "^2.29.1",
+    "progress-bar-webpack-plugin": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.14.0",
+    "vanillajs-datepicker": "^1.1.4"
   }
 }

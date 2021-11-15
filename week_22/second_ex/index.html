@@ -20,7 +20,7 @@
         <div class="menu">
             <div>
                 <img src="">
-                <h3>Dashboard</h3>
+                <h3 style="color: rgba(74, 74, 190, 0.836);">Dashboard</h3>
             </div>
             <div>
                 <img src="">
@@ -52,9 +52,11 @@
         <div class="main_top">
             <h1>Dashboard</h1>
             <p id="date"></p>
-            <select class="calendar">
-                <option selected>Jan-Feb 2021</option>
-            </select>
+            <div class="calendar">
+                <input type="text" id="one" placeholder="Jan 10, 2021"></input>
+                <span>-</span>
+                <input type="text" id="two" placeholder="Feb 10, 2021"></input>
+            </div>
         </div>
         <div class="hello-cont">
             <div class="hello">
@@ -74,6 +76,7 @@
         </div>
     </main>
     <section></section>
+    
     
     <script src="bundle.js"></script>
 </body>

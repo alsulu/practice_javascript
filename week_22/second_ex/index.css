@@ -1,6 +1,8 @@
+@import './node_modules/js-datepicker/dist/datepicker.min.css';
+
 body {
     display: grid;
-    grid-template-columns: 15vw 65vw 1fr;
+    grid-template-columns: 20vw 1fr;
 }
 
 menu {
@@ -20,9 +22,9 @@ menu {
     background-color: rgb(245, 245, 245);
     border-radius: 10px;
     height: 45px;
-    width: 70%;
+    width: 60%;
     font-weight: 800;
-    font-size: 12px;
+    font-size: 13px;
     color: rgb(32, 32, 32);
     font-family: "Montserrat", "Arial", sans-serif;
     border: none;
@@ -39,7 +41,7 @@ menu {
 
 menu h1 {
     font-size: 14px;
-    width: 70%;
+    width: 60%;
     margin: 15px auto;
 }
 
@@ -48,7 +50,7 @@ menu h1 {
     height: 60px;
     display: flex;
     flex-direction: row;
-    width: 70%;
+    width: 60%;
     margin: auto;
     align-items: center;
 }
@@ -64,7 +66,7 @@ menu h1 {
     background-color: rgb(245, 245, 245);
     border-radius: 10px;
     justify-content: center;
-    padding: 0 5px;
+    padding: 2px;
 }
 
 .add p {
@@ -91,7 +93,7 @@ main {
 .main_top {
     height: 70px;
     display: grid;
-    grid-template-columns: 1fr 150px;
+    grid-template-columns: 1fr 215px;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "title calendar"
         "date calendar";
@@ -122,13 +124,29 @@ main {
     grid-area: calendar;
     background-color: white;
     border-radius: 10px;
-    height: 45px;
-    font-weight: 800;
-    font-size: 12px;
+    height: 25px;
     color: rgba(32, 32, 32, 0.712);
     font-family: "Montserrat", "Arial", sans-serif;
     border: none;
-    padding: 10px;
+    padding: 12px 17px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.calendar input {
+    width: 50%;
+    height: 100%;
+    border: none;
+    text-align: center;
+}
+
+.calendar input,
+.calendar span {
+    font-size: 12.5px;
+    font-weight: 800;
+    font-family: "Montserrat", "Arial", sans-serif;
+    color: rgba(32, 32, 32, 0.712);
 }
 
 #now-day {
