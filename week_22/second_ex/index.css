@@ -91,16 +91,17 @@ main {
 }
 
 .main_top {
-    height: 70px;
+    height: 100px;
     display: grid;
     grid-template-columns: 1fr 215px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "title calendar"
-        "date calendar";
+        "date calendar"
+        ". btn-calendar";
     width: 90%;
     margin: auto;
     align-items: center;
-    padding: 30px 0 20px 0;
+    padding: 30px 0 0 0;
 }
 
 .main_top h1 {
@@ -147,6 +148,22 @@ main {
     font-weight: 800;
     font-family: "Montserrat", "Arial", sans-serif;
     color: rgba(32, 32, 32, 0.712);
+}
+
+#btn-calendar {
+    grid-area: btn-calendar;
+    height: 25px;
+    width: 90px;
+    justify-self: right;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(207, 117, 129);
+    color: white;
+    font-size: 14x;
+    font-weight: 700;
+    font-family: "Nunito Sans", sans-serif;
+    margin-top: -45px;
+    z-index: 2;
 }
 
 #now-day {
